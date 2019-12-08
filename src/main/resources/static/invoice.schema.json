@@ -1,0 +1,246 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "amount_paid": {
+          "type": "string"
+        },
+        "item_row_number_label": {
+          "type": "string"
+        },
+        "invoice_title": {
+          "type": "string"
+        },
+        "client_city_zip_state": {
+          "type": "string"
+        },
+        "amount_total": {
+          "type": "string"
+        },
+        "client_other": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "company_address": {
+          "type": "string"
+        },
+        "company_email_web": {
+          "type": "string"
+        },
+        "bill_to_label": {
+          "type": "string"
+        },
+        "client_phone_fax": {
+          "type": "string"
+        },
+        "item_description_label": {
+          "type": "string"
+        },
+        "issue_date": {
+          "type": "string"
+        },
+        "item_line_total_label": {
+          "type": "string"
+        },
+        "tax_value": {
+          "type": "string"
+        },
+        "terms": {
+          "type": "string"
+        },
+        "invoice_reference": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "amount_due": {
+          "type": "string"
+        },
+        "payment_info": {
+          "type": "array",
+          "items": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "currency_label": {
+          "type": "string"
+        },
+        "client_address": {
+          "type": "string"
+        },
+        "amount_subtotal_label": {
+          "type": "string"
+        },
+        "invoice_number": {
+          "type": "string"
+        },
+        "issue_date_label": {
+          "type": "string"
+        },
+        "client_name": {
+          "type": "string"
+        },
+        "terms_label": {
+          "type": "string"
+        },
+        "company_phone_fax": {
+          "type": "string"
+        },
+        "invoice_reference_label": {
+          "type": "string"
+        },
+        "item_price_label": {
+          "type": "string"
+        },
+        "companyLogo": {
+          "type": "string"
+        },
+        "tax_name": {
+          "type": "string"
+        },
+        "due_date": {
+          "type": "string"
+        },
+        "client_email": {
+          "type": "string"
+        },
+        "amount_due_label": {
+          "type": "string"
+        },
+        "amount_paid_label": {
+          "type": "string"
+        },
+        "amount_total_label": {
+          "type": "string"
+        },
+        "company_city_zip_state": {
+          "type": "string"
+        },
+        "item_discount_label": {
+          "type": "string"
+        },
+        "company_name": {
+          "type": "string"
+        },
+        "item_quantity_label": {
+          "type": "string"
+        },
+        "payment_info_label": {
+          "type": "string"
+        },
+        "item_tax_label": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "itemQuantity": {
+                  "type": "string"
+                },
+                "itemDiscount": {
+                  "type": "string"
+                },
+                "itemPrice": {
+                  "type": "string"
+                },
+                "itemTax": {
+                  "type": "string"
+                },
+                "itemDescription": {
+                  "type": "string"
+                },
+                "itemRowNumber": {
+                  "type": "string"
+                },
+                "itemLineTotal": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "itemQuantity",
+                "itemDiscount",
+                "itemPrice",
+                "itemTax",
+                "itemDescription",
+                "itemRowNumber",
+                "itemLineTotal"
+              ]
+            }
+          ]
+        },
+        "amount_subtotal": {
+          "type": "string"
+        },
+        "due_date_label": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "amount_paid",
+        "item_row_number_label",
+        "invoice_title",
+        "client_city_zip_state",
+        "amount_total",
+        "client_other",
+        "company_address",
+        "company_email_web",
+        "bill_to_label",
+        "client_phone_fax",
+        "item_description_label",
+        "issue_date",
+        "item_line_total_label",
+        "tax_value",
+        "terms",
+        "invoice_reference",
+        "currency",
+        "amount_due",
+        "payment_info",
+        "currency_label",
+        "client_address",
+        "amount_subtotal_label",
+        "invoice_number",
+        "issue_date_label",
+        "client_name",
+        "terms_label",
+        "company_phone_fax",
+        "invoice_reference_label",
+        "item_price_label",
+        "companyLogo",
+        "tax_name",
+        "due_date",
+        "client_email",
+        "amount_due_label",
+        "amount_paid_label",
+        "amount_total_label",
+        "company_city_zip_state",
+        "item_discount_label",
+        "company_name",
+        "item_quantity_label",
+        "payment_info_label",
+        "item_tax_label",
+        "items",
+        "amount_subtotal",
+        "due_date_label"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}

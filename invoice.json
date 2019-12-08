@@ -1,0 +1,64 @@
+{
+  "data": {
+    "amount_paid": "0",
+    "item_row_number_label": "",
+    "invoice_title": "Fatoura",
+    "client_city_zip_state": "30000 Bedrock, Cobblestone County",
+    "amount_total": "1100",
+    "client_other": [
+      "Attn: Fred Flintstone"
+    ],
+    "company_address": "227 Cobblestone Road",
+    "company_email_web": "www.dinostore.bed - hello@dinostore.bed",
+    "bill_to_label": "Client",
+    "client_phone_fax": "+1 77 22 555 666",
+    "item_description_label": "Item",
+    "issue_date": "01/12/2019",
+    "item_line_total_label": "Linetotal",
+    "tax_value": "100",
+    "terms": "Fred, thank you very much. We really appreciate your business. Please send payments before the due date.",
+    "invoice_reference": "Order #1234",
+    "currency": "USD",
+    "amount_due": "1100",
+    "payment_info": [
+      "Account Number - 123006705",
+      "IBAN - US100000060345"
+    ],
+    "currency_label": "* All prices are in ",
+    "client_address": "222 Rocky Way",
+    "amount_subtotal_label": "Subtotal",
+    "invoice_number": "2000",
+    "issue_date_label": "Issue on",
+    "client_name": "Slate Rock",
+    "terms_label": "Terms",
+    "company_phone_fax": "Phone: +1 780 546 2222 - Fax: +1 780 546 2424",
+    "invoice_reference_label": "Reference",
+    "item_price_label": "Unit price",
+    "companyLogo": "",
+    "tax_name": "Tax",
+    "due_date": "01/01/2020",
+    "client_email": "fred@slaterockgravel.bed",
+    "amount_due_label": "Due sum",
+    "amount_paid_label": "Paid",
+    "amount_total_label": "",
+    "company_city_zip_state": "30000 Bedrock, Cobblestone County",
+    "item_discount_label": "Discount",
+    "company_name": "Awar",
+    "item_quantity_label": "Qty",
+    "payment_info_label": "Payments",
+    "item_tax_label": "Tax",
+    "items": [
+      {
+        "itemQuantity": "1",
+        "itemDiscount": "0",
+        "itemPrice": "1000",
+        "itemTax": "0",
+        "itemDescription": "Product 1",
+        "itemRowNumber": "1",
+        "itemLineTotal": "1000"
+      }
+    ],
+    "amount_subtotal": "1000",
+    "due_date_label": "Due on"
+  }
+}

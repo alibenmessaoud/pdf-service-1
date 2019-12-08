@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring3-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <meta charset="utf-8"/>
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        html {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        caption, th, td {
+            text-align: left;
+            font-weight: normal;
+            vertical-align: middle;
+        }
+
+        q, blockquote {
+            quotes: none;
+        }
+
+        q:before, q:after, blockquote:before, blockquote:after {
+            content: "";
+            content: none;
+        }
+
+        a img {
+            border: none;
+        }
+
+        article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+            display: block;
+        }
+
+        .clearfix {
+            display: block;
+            clear: both;
+        }
+
+        b, strong {
+            font-weight: bold;
+        }
+
+        #container {
+            font: normal 13px/1.4em 'Open Sans', Sans-serif;
+            margin: 0 auto;
+            min-height: 1158px;
+            position: relative;
+        }
+
+        #memo .company-info {
+            float: left;
+        }
+
+        #memo .company-info div {
+            font-size: 28px;
+            text-transform: uppercase;
+            min-width: 20px;
+            line-height: 1em;
+        }
+
+        #memo .company-info span {
+            font-size: 12px;
+            color: #858585;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        #memo .logo {
+            float: right;
+            margin-left: 15px;
+        }
+
+        #memo .logo img {
+            width: 150px;
+            height: 100px;
+        }
+
+        #memo:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #invoice-title-number {
+            margin: 50px 0 20px 0;
+            display: inline-block;
+            float: left;
+        }
+
+        #invoice-title-number span {
+            text-transform: uppercase;
+        }
+
+        #client-info {
+            float: right;
+            text-align: right;
+            margin-top: 50px;
+            min-width: 220px;
+        }
+
+        #client-info h3 {
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+
+        #client-info .client-name {
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            margin: 7px 0;
+        }
+
+        #client-info > div {
+            margin-bottom: 3px;
+            min-width: 20px;
+        }
+
+        #client-info span {
+            display: block;
+            min-width: 20px;
+        }
+
+
+        table {
+            table-layout: fixed;
+        }
+
+        table th, table td {
+            vertical-align: top;
+            word-break: keep-all;
+            word-wrap: break-word;
+        }
+
+        .currency {
+            margin-top: 20px;
+            text-align: right;
+            color: #858585;
+            font-style: italic;
+            font-size: 12px;
+        }
+
+        #items {
+            margin-top: 10px;
+        }
+
+        #items #items table th:first-child, #items table td:first-child {
+            width: 18px;
+            text-align: right;
+        }
+
+        #items table {
+            border-collapse: separate;
+            width: 100%;
+        }
+
+        #items table th {
+            font-family: Sanchez, Serif;
+            font-size: 12px;
+            text-transform: uppercase;
+            padding: 5px 3px;
+            text-align: right;
+            background: #b0b4b3;
+            color: white;
+        }
+
+        #items table th:nth-child(2) {
+            width: 30%;
+            text-align: left;
+        }
+
+        #items table th:last-child {
+            text-align: right;
+        }
+
+        #items table td {
+            padding: 10px 3px;
+            text-align: right;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #items table td:first-child {
+            text-align: left;
+        }
+
+        #items table td:nth-child(2) {
+            text-align: left;
+        }
+
+        #sums {
+            float: right;
+            margin-top: 30px;
+        }
+
+        #sums table tr th, #sums table tr td {
+            min-width: 100px;
+            padding: 8px 3px;
+            text-align: right;
+        }
+
+        #sums table tr th {
+            padding-right: 25px;
+        }
+
+        #sums table tr.amount-total td {
+            background: #415472;
+            color: white;
+            font-family: Sanchez, Serif;
+            font-size: 35px;
+            line-height: 1em;
+            padding: 7px !important;
+        }
+
+        #sums table tr.due-amount th, #sums table tr.due-amount td {
+            font-weight: bold;
+        }
+
+        #general-terms {
+            margin-top: 60px;
+        }
+
+        #general-terms > span {
+            font-weight: bold;
+            display: inline-block;
+            min-width: 20px;
+            text-transform: uppercase;
+        }
+
+        #general-terms > div {
+            min-height: 50px;
+            min-width: 50px;
+        }
+
+        .payment-info {
+            font-size: 12px;
+            color: #858585;
+            margin-top: 30px;
+        }
+
+        .payment-info div {
+            min-width: 20px;
+        }
+
+        .payment-info div:first-child {
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+
+
+    <section id="memo">
+        <div class="company-info">
+            <div id="company_name">[[${company_name}]]</div>
+            <br/>
+            <span id="company_address">[[${company_address}]]</span>
+            <br/>
+            <span id="company_city_zip_state">[[${company_city_zip_state}]]</span>
+            <br/>
+            <span id="company_phone_fax">[[${company_phone_fax}]]</span>
+            <br/>
+            <span id="company_email_web">[[${company_email_web}]]</span>
+        </div>
+
+        <div class="logo">
+            <img id="company_logo" />
+        </div>
+    </section>
+
+    <section id="invoice-title-number">
+
+        <span id="invoice_title">[[${invoice_title}]]</span> - <span id="invoice_number">#[[${invoice_number}]]</span>
+        <br/>
+        <span id="invoice_reference_label">[[${invoice_reference_label}]]</span> - <span id="invoice_reference">[[${invoice_reference}]]</span>
+        <br/>
+        <span id="issue_date_label">[[${issue_date_label}]]</span> - <span id="issue_date">[[${issue_date}]]</span>
+        <br/>
+        <span id="due_date_label">[[${due_date_label}]]</span> <span id="due_date">[[${due_date}]]</span>
+
+    </section>
+
+    <section id="client-info">
+        <h3 id="bill_to_label">[[${bill_to_label}]]</h3>
+        <div class="client-name">
+            <span id="client_name">[[${client_name}]]</span>
+        </div>
+        <span id="client_address">[[${client_address}]]</span>
+        <span id="client_city_zip_state">[[${client_city_zip_state}]]</span>
+        <span id="client_phone_fax">[[${client_phone_fax}]]</span>
+        <span id="client_email">[[${client_email}]]</span>
+        <span id="client_other">[[${client_other}]]</span>
+    </section>
+
+    <div class="clearfix"></div>
+
+    <div class="clearfix"></div>
+
+    <div class="currency">
+        <span id="currency_label">[[${currency_label}]]</span> <span id="currency">[[${currency}]]</span>
+    </div>
+
+    <section id="items">
+
+        <table cellpadding="0" cellspacing="0">
+
+            <thead>
+            <tr>
+                <th id="item_row_number_label">[[${item_row_number_label}]]</th>
+                <th id="item_description_label">[[${item_description_label}]]</th>
+                <th id="item_quantity_label">[[${item_quantity_label}]]</th>
+                <th id="item_price_label">[[${item_price_label}]]</th>
+                <th id="item_discount_label">[[${item_discount_label}]]</th>
+                <th id="item_tax_label">[[${item_tax_label}]]</th>
+                <th id="item_line_total_label">[[${item_line_total_label}]]</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr>
+                <td>1</td>
+                <td>Frozen Brontosaurus Ribs</td>
+                <td>2</td>
+                <td>120</td>
+                <td>0</td>
+                <td>2%</td>
+                <td>242.4</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Mammoth Chops</td>
+                <td>14</td>
+                <td>175</td>
+                <td>10%</td>
+                <td>5%</td>
+                <td>2216</td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Chops Mammoth</td>
+                <td>10</td>
+                <td>175</td>
+                <td>10%</td>
+                <td>5%</td>
+                <td>1000</td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <section id="sums">
+
+        <table cellpadding="0" cellspacing="0">
+            <tbody>
+            <tr>
+                <th id="amount_subtotal_label">[[${amount_subtotal_label}]]</th>
+                <th id="amount_subtotal">[[${amount_subtotal}]]</th>
+            </tr>
+
+            <tr>
+                <th id="tax_name">[[${tax_name}]]</th>
+                <td id="tax_value">[[${tax_value}]]</td>
+            </tr>
+
+            <tr class="amount-total">
+                <td colspan="2" id="amount_total">[[${amount_total}]]</td>
+            </tr>
+
+            <tr>
+                <th id="amount_paid_label">[[${amount_paid_label}]]</th>
+                <td id="amount_paid">[[${amount_paid}]]</td>
+            </tr>
+
+            <tr class="due-amount">
+                <th id="amount_due_label">[[${amount_due_label}]]</th>
+                <td id="amount_due">[[${amount_due}]]</td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </section>
+
+    <div class="clearfix"></div>
+
+    <section id="general-terms">
+
+        <span id="terms_label">[[${terms_label}]]</span>
+        <div id="terms">[[${terms}]]</div>
+
+    </section>
+
+    <div class="payment-info">
+        <div id="payment_info_label">[[${payment_info_label}]]</div>
+        <div id="payment_info">[[${payment_info}]]</div>
+
+    </div>
+</div>
+
+
+</body>
+</html>
